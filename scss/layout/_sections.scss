@@ -1,0 +1,123 @@
+// Who am I
+
+.signiture {
+	font-style: italic;
+	font-family: 'Droid Serif', serif;
+	font-size: 1.2em;
+	margin-top: 30px;
+}
+
+// What I do
+
+.what-i-do {
+	background-color: $color-dark-blue;
+	@media(max-width: $screen-md - 1){
+		&__item {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+// My Values
+
+.my-values {
+	background: url('../img/my-values.jpg') no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	ol {
+		padding: 0;
+		font-size: 1.8em;
+		margin: auto;
+		display: inline-block;
+		list-style-type: none;
+		line-height: 1.7;
+		position: relative;
+		@media(min-width: $screen-sm){
+			&:after,
+			&:before {
+				content: "";
+				width: 100px;
+				height: 2px;
+				background-color: $color-elegant-gray;
+				display: block;
+				position: absolute;
+				top: 50%;
+			}
+			&:after {
+				left: 250px;
+			}
+			&:before {
+				right: 250px;
+			}
+		}
+		@media(min-width: $screen-md){
+			&:after,
+			&:before {
+				width: 130px;
+			}
+			&:after {
+				left: 280px;
+			}
+			&:before {
+				right: 280px;
+			}
+		}
+		@media(min-width: $screen-lg){
+			&:after,
+			&:before {
+				width: 150px;
+			}
+			&:after {
+				left: 320px;
+			}
+			&:before {
+				right: 320px;
+			}
+		}
+		li {
+			position: relative;
+			counter-increment: customlistcounter;
+			&:before {
+				 content: "#" counter(customlistcounter);
+		         margin-right: 10px;
+			}
+		}
+	}
+}
+
+// Contact
+
+.contact-me {
+	background-color: $color-dark-blue;
+	.form-container {
+	width: 90%;
+	margin: auto;
+	max-width: 500px;
+	}
+	textarea {
+		width: 100%;
+		max-height: 150px;
+		padding: 8px 12px;
+	}
+}
+
+// Shop
+.section--shop {
+	background-color: $color-dark-blue;
+	color: #fff;
+}
+
+// Video
+
+.section--video {
+	background:$color-dark-blue;
+	color: #fff;
+	.single-video-container{
+		max-width: 700px;
+		margin:50px auto;
+	}
+	.video-title {
+		font-weight: normal;
+		margin: 20px 0;
+	}
+}

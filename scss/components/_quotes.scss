@@ -1,0 +1,42 @@
+.quote {
+	color: #fff;
+	border-left: 10px solid;
+	padding-left: 30px;
+	line-height: 1.6;
+	font-weight: bold;
+	font-style: italic;
+	font-family: 'Droid Serif', serif;
+}
+
+.quote--header {
+	font-size: 1.3em;
+	width: 80%;
+	max-width: 1200px;
+	border-color: $color-elegant-gray;
+	@include abs-centered(both);
+	animation-delay: .6s;
+	@media(min-width: 400px) {
+		font-size: 1.6em;
+	}
+	@media(min-width: 500px) {
+		font-size: 2.1em;
+	}
+	@media(min-width: $screen-md) {
+		font-size: 2.5em;
+	}
+		@media(min-width: $screen-lg) {
+			font-size: 3em;
+	}
+}
+
+.quote--footer {
+	color: $color-dark-blue;
+	width: 90%;
+	max-width: 400px;
+	margin: 40px auto;
+	font-size: 1.2em;
+	border-color: $color-dark-blue;
+	@media(min-width: $screen-md){
+		margin: 0 auto 20px auto;
+	}
+}

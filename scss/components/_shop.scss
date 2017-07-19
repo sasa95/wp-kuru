@@ -1,0 +1,40 @@
+#shop-section {
+	.col-lg-3,
+	.col-md-6 {
+		display: flex;
+		justify-content:center;
+		margin-bottom: 35px;
+	}
+	.shop-item-link {
+		transition:box-shadow .4s;
+		&:hover {
+			box-shadow: 0 1px 5px 5px rgba(154,154,154,.62);
+		}	
+		&:hover .shop-item-card {
+			border-radius: 0;
+		}	
+		
+	}
+	.shop-item-card {
+		max-width: 220px;
+		border:2px solid #fff;
+		border-radius: 10px;
+		padding: 15px 15px 35px 15px;
+		text-align: center;
+		transition:border-radius .4s;
+	}
+	.item-title {
+		color: #fff;
+		font-size: 1.5em;
+		margin: 15px 0;
+		font-weight: normal;
+	}
+	.item-img {
+		max-width: 170px;
+	}
+	.item-price {
+		color: $color-price;
+		font-size: 1.2em;
+	}
+}
+

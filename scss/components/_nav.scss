@@ -1,0 +1,85 @@
+#nav--main {
+	animation-delay: .3s;
+	z-index: 100;
+	transition:all .8s;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	min-height: 60px;
+	text-align: center;
+	background-color: rgba(255,255,255,.2);
+	padding: 8px 0 0;
+	@media(min-width: $screen-lg){
+		padding:0 0 3px 0;
+	}
+}
+
+
+#nav--main.scrolledNav {
+	box-shadow: 0 2px 2px rgba(0,0,0,.4);
+	background-color: rgba(65,81,97,1);
+	min-height: 30px;
+	@media(max-width: $screen-md - 1){
+		padding-bottom: 5px;
+	}
+}
+
+#navbarToggler {
+	width: 100%;
+	clear: both;
+	&>ul {
+		padding-left: 15px;
+	}
+}
+
+// Navbar brand
+.navbar-light .navbar-brand {
+	padding-left: 15px;
+	color: #fff;
+	transition:color .4s;
+	&:hover {
+		color: #525252;
+	}
+}
+
+// Nav links color setup
+.navbar-light .navbar-nav {
+	.menu-item a {
+		display: block;
+		padding: 8px 8px 8px 30px;
+		background-repeat: no-repeat;
+		background-size: 16px;
+		background-position:left center;
+		color: $color-nav-links;
+		transition: all .4s;
+		&:focus,
+		&:hover {
+			color: #fff;
+		}
+	}
+	.current-menu-item > a{
+		color: #fff;
+	}
+	.home-link>a {
+		background-image: url('img/header/nav-icons/home.png');
+		background-position: left 45%;
+	}
+	.video-link>a {
+		background-image: url('img/header/nav-icons/video.png');
+	}
+	.shop-link>a {
+		background-image: url('img/header/nav-icons/cart.png');
+	}
+}
+
+.menu-item:not(:first-child) {
+	@media(min-width: $screen-lg) {
+		padding-left: 15px;
+	}
+}
+
+.header__arrows {
+	width: 16px;
+	@include abs-centered(horizontal);
+	bottom: 4%;
+}

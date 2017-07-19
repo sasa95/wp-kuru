@@ -1,0 +1,60 @@
+#footer {
+	padding: 40px 0;
+	.row {
+		justify-content:space-between;
+	}
+	form {
+		position: relative;
+		max-width: 350px;
+		margin: auto;
+	}
+	.button--dark-blue {
+		height: 40px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	.subscribe-label {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	@media(min-width: $screen-md){
+		.subscribe-label {
+			text-align: left;
+		}
+		form {
+			margin: 0;
+		}
+	}
+}
+
+#subscribe-email {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border:2px solid $color-dark-blue;
+}
+
+.footer__last-line {
+	text-align: center;
+	@media(min-width: $screen-md){
+		display: flex;
+		justify-content:space-between;
+	}
+	p {
+		font-size: .8em;
+	}
+	.author {
+		a {
+			color: $color-dark-blue;
+			text-decoration: none!important;
+			&:hover {
+				color: lighten($color-dark-blue,10);
+			}
+		}
+	}
+	.copyright {
+		margin-bottom: 5px;
+	}
+}

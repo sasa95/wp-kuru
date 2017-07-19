@@ -1,0 +1,32 @@
+.header {
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 550px;
+	position: relative;
+	@media(min-width: 375px){
+		min-height: 665px;
+	}
+	.button--elegant {
+		@include abs-centered(horizontal);
+		bottom: 10%;
+	}
+}
+
+.header--main {
+	background-image: url('img/header/header-main.jpg');
+}
+
+// Shop
+
+.header--shop {
+	background-image: url('img/header/header-shop.jpg');
+	.header__writings {
+		@include abs-centered();
+		h1 {
+			color: #fff;
+			font-weight: normal;
+			letter-spacing: 2px;
+			text-align: center;
+		}
+	}
+}
