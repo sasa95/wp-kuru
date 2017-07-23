@@ -59,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   min-height: 550px;
   position: relative;
+  overflow: hidden;
 }
 @media (min-width: 375px) {
   .header {
@@ -66,9 +67,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .header .button--elegant {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
+  position: absolute !important;
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
   bottom: 10%;
 }
 
@@ -80,10 +81,10 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("img/header/header-shop.jpg");
 }
 .header--shop .header__writings {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
 }
 .header--shop .header__writings h1 {
   color: #fff;
@@ -280,6 +281,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 0 3px 0;
   }
 }
+@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #nav--main {
+    padding-top: 8px;
+  }
+}
 
 #nav--main.scrolledNav {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
@@ -343,9 +349,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .header__arrows {
   width: 16px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
+  position: absolute !important;
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
   bottom: 4%;
 }
 
@@ -464,6 +470,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .button--add-to-cart {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 10px;
   color: #fff !important;
   border: 1px solid #fff;
@@ -491,10 +499,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 80%;
   max-width: 1200px;
   border-color: #a5a0a4;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
   animation-delay: .6s;
 }
 @media (min-width: 400px) {

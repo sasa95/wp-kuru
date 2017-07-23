@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,7 +10,7 @@
   <body>
     <div id="wrapper">
       <header id="header" class="header header--main">
-        <nav class="animated slideInDown navbar navbar-toggleable-md navbar-light" id="nav--main">
+        <nav class="navbar navbar-toggleable-md navbar-light" id="nav--main" data-aos="fade-down" data-aos-delay="200">
           <div class="container">
             <a class="navbar-brand float-left" href="<?php bloginfo('url');?>">LOGO</a>
             <button class="navbar-toggler collapsed float-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,17 +20,6 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarToggler">
-             <!--  <ul class="navbar-nav ml-auto mt-md-0 text-left">
-                <li class="nav-item">
-                  <a class="nav-link home-link active" href="<?php bloginfo('url');?>">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link video-link" href="video.html">Video</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link shop-link" href="shop.html">Shop</a>
-                </li>
-              </ul> -->
               <?php
                 $args = array(
                   'menu'          => 'header-menu',
@@ -41,7 +31,7 @@
             </div>
           </div>
         </nav>
-          <p class="animated fadeIn quote quote--header">Be you, for yourself. No one is able to replace you.</p>
-          <a href="#about" class="animated fadeIn button button--elegant" style="animation-delay: .9s;">Learn More</a>
-          <img class="header__arrows animated fadeIn" src="<?php bloginfo('stylesheet_directory');?>/img/header/arrows.png" alt="" style="animation-delay: 1.2s;">
+          <p class="animated fadeIn quote quote--header" data-aos="fade" data-aos-delay="500">Be you, for yourself. No one is able to replace you.</p>
+          <a href="#about" class="button button--elegant" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="700">Learn More</a>
+          <img class="header__arrows" src="<?php bloginfo('stylesheet_directory');?>/img/header/arrows.png" alt=""  data-aos="fade" data-aos-offset="-100" data-aos-delay="900">
       </header><!-- #header -->

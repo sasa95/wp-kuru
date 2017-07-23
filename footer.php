@@ -1,4 +1,4 @@
- <footer id="footer">
+      <footer id="footer">
         <div class="container">
           <div class="row">
             <div class="col-md-6 mb-5">
@@ -13,11 +13,12 @@
               <a href=""><img src="<?php bloginfo('stylesheet_directory');?>/img/instagram.png" alt=""></a>
             </div>
           </div>
-          <p class="quote quote--footer">You are My sight, so have faith. You are My Face, so veil yourself.</p>
+          <p class="quote quote--footer" data-aos="fade" data-aos-offset="-10">You are My sight, so have faith. You are My Face, so veil yourself.</p>
           <div class="footer__last-line">
             <p class="copyright">© <?php echo date('Y');?> Lustrous Kaizen - All Rights Reserved</p>
             <p class="author">Website designed and developed by <a href="#"><strong>Sasha Drmic</strong></a></p>
           </div>
+        </div>
       </footer><!-- #footer -->
 
     </div><!-- #wrapper -->

@@ -3,6 +3,7 @@
 	background-size: cover;
 	min-height: 550px;
 	position: relative;
+	overflow: hidden;
 	@media(min-width: 375px){
 		min-height: 665px;
 	}

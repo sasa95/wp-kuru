@@ -12,6 +12,10 @@
 	@media(min-width: $screen-lg){
 		padding:0 0 3px 0;
 	}
+	 @media (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+      padding-top: 8px;
+  	}
+  
 }
 
 
