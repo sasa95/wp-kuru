@@ -222,6 +222,11 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   bottom: 0;
 }
+@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #footer .button--dark-blue {
+    height: auto;
+  }
+}
 #footer .subscribe-label {
   text-align: center;
   margin-bottom: 20px;
