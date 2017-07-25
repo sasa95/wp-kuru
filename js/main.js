@@ -59,4 +59,16 @@ jQuery( document ).ready( function( $ ) {
         }
       }
     });
+
+    $('.button--add-to-cart').click(function() {
+      $(this).prev('.shop-item-link').addClass('shop-item-link--added');
+    });
+
+
+
+
+
+
+
+
 });
