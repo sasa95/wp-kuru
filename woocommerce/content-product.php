@@ -30,17 +30,20 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
- <div class="col-lg-3 col-md-6">
+ <div class="col-xl-3 col-lg-4 col-md-6">
  	<a href="<?php echo get_permalink();?>" class="shop-item-link">
   		<div class="shop-item-card" data-aos="fade-in">
   			<img class="item-img" src="<?php the_post_thumbnail_url()?>" alt=""/>
   			 <h2 class="item-title"><?php the_title()?></h2>
   			 <p class="item-price">
   			 	<?php 
-  			 		if($sale!="")
-  			 			echo '$'.$sale;
-  			 		else 
-  			 			echo '$'.$price;
+  			 		/**
+	 * woocommerce_after_shop_loop_item_title hook.
+	 *
+	 * @hooked woocommerce_template_loop_rating - 5
+	 * @hooked woocommerce_template_loop_price - 10
+	 */
+	do_action( 'woocommerce_after_shop_loop_item_title' );
   			 	?>
   			 </p>
   		</div>

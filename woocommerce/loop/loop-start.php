@@ -16,5 +16,4 @@
  * @version     2.0.0
  */
 ?>
-<a class="button button--elegant button--view-cart" href="<?php echo (bloginfo('url') . '/cart')?>">View Cart</a>
 <div class="row">

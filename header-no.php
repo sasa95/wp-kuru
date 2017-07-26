@@ -9,14 +9,14 @@
   
   <body <?php body_class(); ?>>
     <div id="wrapper">
-      <header id="header" class="header header--shop">
-        <nav class="navbar navbar-toggleable-md navbar-light" id="nav--main" data-aos="fade-down" data-aos-delay="200">
+      <header id="header" class="header--no-bg">
+        <nav class="scrolledNav navbar navbar-toggleable-md navbar-light" id="nav--main">
           <div class="container">
             <a class="navbar-brand float-left" href="<?php bloginfo('url');?>">LOGO</a>
-            <button class="navbar-toggler collapsed float-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="hamburger-menu"></span>
-              <span class="hamburger-menu"></span>
-              <span class="hamburger-menu"></span>
+            <button class="togglerScrolled navbar-toggler collapsed float-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="hamburger-menu hambgScrolled"></span>
+              <span class="hamburger-menu hambgScrolled"></span>
+              <span class="hamburger-menu hambgScrolled"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarToggler">
@@ -32,10 +32,4 @@
             </div>
           </div>
         </nav>
-        <div class="header__writings">
-            <img src="<?php bloginfo('stylesheet_directory');?>/img/logo.png" alt="">
-            <h1 class="animated fadeIn">Official Web Shop</h1>
-          </div>
-          <a href="#shop-section" class="button button--elegant">Shop Now</a>
-           <img class="header__arrows" src="<?php bloginfo('stylesheet_directory');?>/img/header/arrows.png" alt=""  data-aos="fade" data-aos-offset="-100" data-aos-delay="900">
       </header><!-- #header -->

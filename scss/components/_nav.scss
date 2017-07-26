@@ -19,6 +19,7 @@
 
 
 #nav--main.scrolledNav {
+	transition:all .8s;
 	box-shadow: 0 2px 2px rgba(0,0,0,.4);
 	background-color: rgba(65,81,97,1);
 	min-height: 30px;
@@ -47,7 +48,9 @@
 
 // Nav links color setup
 .navbar-light .navbar-nav {
-	.menu-item a {
+	@at-root %nav__cart,
+	.menu-item a,
+	 {
 		display: block;
 		padding: 8px 8px 8px 30px;
 		background-repeat: no-repeat;
@@ -71,7 +74,7 @@
 		background-image: url('img/header/nav-icons/video.png');
 	}
 	.shop-link>a {
-		background-image: url('img/header/nav-icons/cart.png');
+		background-image: url('img/header/nav-icons/shirt.png');
 	}
 }
 

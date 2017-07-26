@@ -90,24 +90,13 @@
 	}
 }
 
-.button--view-cart {
-	display: inline-block;
-	margin-bottom: 30px;
-	// font-size: 1em;
-	padding-left: 45px;
-	background-image: url('img/header/nav-icons/cart.png');
-	background-color: $color-elegant-red;
-	background-repeat: no-repeat;
-	background-size: 27px;
-	background-position: 5% 50%;
-	&:hover {
-		background-color: darken($color-elegant-red,5%);
-	}
-	&--loop-end {
-		margin-bottom: 70px;
-	}
-}
-
 body.post-type-archive-product .woo-container {
 	text-align: center;
+}
+
+.cart-customlocation {
+	margin-left: 15px;
+	text-align: left;
+	background-image: url('img/header/nav-icons/cart.png');
+	@extend %nav__cart;
 }

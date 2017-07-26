@@ -1,6 +1,5 @@
 <?php if(is_page('shop')) { get_header('shop');} else { get_header(); }?>
 
-
 <div id="content"><!-- #content -->
   <section class="section--shop pt-5" id="shop-section">
     <div class="container text-center">

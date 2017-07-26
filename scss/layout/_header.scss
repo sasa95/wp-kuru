@@ -31,3 +31,18 @@
 		}
 	}
 }
+
+body.single-product {
+	.header--shop {
+		min-height: auto;
+		background-image: none;
+	}
+}
+
+.header--no-bg {
+	height: 40px;
+}
+
+.wrapper {
+	background-color: red;
+}

@@ -17,4 +17,3 @@
  */
 ?>
 </div>
-<a class="button button--elegant button--view-cart button--view-cart--loop-end" href="<?php echo (bloginfo('url') . '/cart')?>">View Cart</a>

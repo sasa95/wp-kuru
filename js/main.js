@@ -4,14 +4,14 @@ AOS.init({
 });
 
 jQuery( document ).ready( function( $ ) {
-  var $nav = $('#nav--main');
-  var $header = $('.header');
-  var $headerHight = $header.height();
-  var $navbarToggler = $('.navbar-toggler');
-  var $hambg = $('.hamburger-menu');
-
-  $(window).scroll(function() {
-    if($(this).scrollTop() > $headerHight - 100){
+  
+  $(document).on('ready scroll',function() {
+    var $nav = $('#nav--main');  
+    var $header = $('.header');
+    var $headerHight = $header.height();
+    var $navbarToggler = $('.navbar-toggler');
+    var $hambg = $('.hamburger-menu');
+    if($(window).scrollTop() > $headerHight - 100){
       $nav.addClass('scrolledNav');
       $navbarToggler.addClass('togglerScrolled');
       $hambg.addClass('hambgScrolled');
@@ -60,15 +60,33 @@ jQuery( document ).ready( function( $ ) {
       }
     });
 
-    $('.button--add-to-cart').click(function() {
+    $('.button--add-to-cart.product_type_simple').click(function() {
       $(this).prev('.shop-item-link').addClass('shop-item-link--added');
     });
 
+    $('body.single-product').find('.wp-post-image').addClass('img-fluid');
 
+     function cartTruncate($cart){
+       var $truncated = $cart.text().substring(0,$cart.text().indexOf(' '));
+       var $concat = 'Cart ('+$truncated+')';
+        $cart.text($concat);
+    }
 
+    $(function(){
+      var $cartCount = $('.cart-customlocation');
+      var $cartCountText = $cartCount.text();
 
+      if($cartCountText.substring(0,1)=='0'){
+        $($cartCount.css('display', 'none'));
+      }
+      else {
+        cartTruncate($cartCount);
+      }
+    });
 
-
-
+    $(document).ajaxComplete(function() {
+        var $cartCount = $('.cart-customlocation');
+         cartTruncate($cartCount);
+    });
 
 });

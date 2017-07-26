@@ -1,6 +1,7 @@
 <?php 
 
 add_theme_support('woocommerce');
+add_theme_support( 'wc-product-gallery-lightbox' );
 
 // Stylesheets
 function kuru_theme_styles() {
@@ -72,7 +73,7 @@ function custom_woocommerce_product_add_to_cart_text() {
 
 
 // Remove sidebar
-//remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
 
 
@@ -134,4 +135,45 @@ function adjust_body_class( $classes ) {
     return $classes; 
      
 }
+// Ensure cart contents update when products are added to the cart via AJAX (place the following in functions.php).
+// Used in conjunction with https://gist.github.com/DanielSantoro/1d0dc206e242239624eb71b2636ab148
+add_filter('add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment');
+ 
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+	
+	ob_start();
+	
+	?>
+	<a class="cart-customlocation" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> - <?php echo $woocommerce->cart->get_cart_total(); ?></a>
+	<?php
+	$fragments['a.cart-customlocation'] = ob_get_clean();
+	return $fragments;
+}
+
+/*---Move Product Title*/
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_title', 5 );
+
+
+
+add_filter( 'woocommerce_variable_sale_price_html', function($html, $product) {
+
+    $prices = array( $product->get_variation_price( 'min', true ), $product->get_variation_price( 'max', true ) );
+    $price = $prices[0] !== $prices[1] ? sprintf( _x( '%1$s&ndash;%2$s', 'Price range: from-to', 'woocommerce' ), wc_price( $prices[0] ), wc_price( $prices[1] ) ) : wc_price( $prices[0] );
+
+    return $price;
+
+    return $html;
+}, 10 ,2 );
+
+add_filter( 'woocommerce_variable_sale_price_html', function($html, $product) {
+
+    $prices = array( $product->get_variation_price( 'min', true ), $product->get_variation_price( 'max', true ) );
+    $price = $prices[0] !== $prices[1] ? sprintf( _x( '%1$s&ndash;%2$s', 'Price range: from-to', 'woocommerce' ), wc_price( $prices[0] ), wc_price( $prices[1] ) ) : wc_price( $prices[0] );
+
+    return $price;
+
+    return $html;
+}, 10 ,2 );
 ?>
