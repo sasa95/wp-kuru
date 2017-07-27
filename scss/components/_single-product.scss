@@ -53,3 +53,29 @@
 		}
 	}
 }
+
+.product.type-product.sale {
+	.onsale {
+			font-size:1.3em;
+			&::before {
+		    content: "( ";
+		    vertical-align: text-bottom;
+		}
+		&::after {
+		    content: " )";
+		    vertical-align: text-bottom;
+		}
+	}
+	.product_title {
+		display: inline-block;
+	}
+	.price {
+		del,ins {
+			display: inline-block;
+			margin-right: 15px;
+		}
+		ins {
+			text-decoration: none;
+		}
+	}
+}

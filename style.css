@@ -591,6 +591,9 @@ body.single-product .header--shop {
   color: #e0ea3f;
   font-size: 1.2em;
 }
+#shop-section .item-price ins, #shop-section div[class*="product-"] .summary.entry-summary .woocommerce-Price-amount ins {
+  text-decoration: none;
+}
 
 .button--add-to-cart, #shop-section .shop-item-link--added ~ .added_to_cart, #shop-section div[class*="product-"] .single_add_to_cart_button {
   text-align: center;
@@ -703,6 +706,28 @@ body.post-type-archive-product .woo-container {
   #shop-section div[class*="product-"] .related.products h2 {
     text-align: center;
   }
+}
+
+.product.type-product.sale .onsale {
+  font-size: 1.3em;
+}
+.product.type-product.sale .onsale::before {
+  content: "( ";
+  vertical-align: text-bottom;
+}
+.product.type-product.sale .onsale::after {
+  content: " )";
+  vertical-align: text-bottom;
+}
+.product.type-product.sale .product_title {
+  display: inline-block;
+}
+.product.type-product.sale .price del, .product.type-product.sale .price ins {
+  display: inline-block;
+  margin-right: 15px;
+}
+.product.type-product.sale .price ins {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
