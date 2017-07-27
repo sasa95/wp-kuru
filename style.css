@@ -308,6 +308,16 @@ body.single-product .header--shop {
     padding-bottom: 5px;
   }
 }
+@media (min-width: 768px) {
+  #nav--main.scrolledNav {
+    padding-bottom: 5px;
+  }
+}
+@media (min-width: 992px) {
+  #nav--main.scrolledNav {
+    padding-bottom: 0;
+  }
+}
 
 #navbarToggler {
   width: 100%;
@@ -557,7 +567,7 @@ body.single-product .header--shop {
   font-size: 1.5em;
   font-weight: bold;
 }
-#shop-section .shop-item-link--added ~ .button--add-to-cart, #shop-section .shop-item-link--added ~ .added_to_cart, #shop-section div[class*="product-"] .shop-item-link--added ~ .single_add_to_cart_button {
+#shop-section .shop-item-link--added ~ .button--add-to-cart, #shop-section .shop-item-link--added ~ .added_to_cart, #shop-section .shop-item-link--added ~ a.reset_variations, #shop-section div[class*="product-"] .shop-item-link--added ~ .single_add_to_cart_button {
   transition: opacity 1s;
   opacity: 0;
 }
@@ -595,7 +605,7 @@ body.single-product .header--shop {
   text-decoration: none;
 }
 
-.button--add-to-cart, #shop-section .shop-item-link--added ~ .added_to_cart, #shop-section div[class*="product-"] .single_add_to_cart_button {
+.button--add-to-cart, #shop-section .shop-item-link--added ~ .added_to_cart, a.reset_variations, #shop-section div[class*="product-"] .single_add_to_cart_button {
   text-align: center;
   position: absolute;
   left: 50%;
@@ -606,10 +616,19 @@ body.single-product .header--shop {
   border-radius: 8px;
   padding: 2px 17px;
 }
-.button--add-to-cart:hover, #shop-section .shop-item-link--added ~ .added_to_cart:hover, #shop-section div[class*="product-"] .single_add_to_cart_button:hover {
+.button--add-to-cart:hover, #shop-section .shop-item-link--added ~ .added_to_cart:hover, a.reset_variations:hover, #shop-section div[class*="product-"] .single_add_to_cart_button:hover {
   text-decoration: none;
   color: #fff;
   background-color: #c56a6c;
+}
+
+a.reset_variations {
+  position: static;
+  transform: translate(0, 0);
+  margin-left: 15px;
+}
+a.reset_variations:after {
+  content: " selection";
 }
 
 body.post-type-archive-product .woo-container {
@@ -707,27 +726,50 @@ body.post-type-archive-product .woo-container {
     text-align: center;
   }
 }
-
-.product.type-product.sale .onsale {
+#shop-section div[class*="product-"].product.type-product.sale .onsale {
   font-size: 1.3em;
 }
-.product.type-product.sale .onsale::before {
+#shop-section div[class*="product-"].product.type-product.sale .onsale::before {
   content: "( ";
   vertical-align: text-bottom;
 }
-.product.type-product.sale .onsale::after {
+#shop-section div[class*="product-"].product.type-product.sale .onsale::after {
   content: " )";
   vertical-align: text-bottom;
 }
-.product.type-product.sale .product_title {
+#shop-section div[class*="product-"].product.type-product.sale .product_title {
   display: inline-block;
 }
-.product.type-product.sale .price del, .product.type-product.sale .price ins {
+#shop-section div[class*="product-"].product.type-product.sale .price del, #shop-section div[class*="product-"].product.type-product.sale .price ins {
   display: inline-block;
   margin-right: 15px;
 }
-.product.type-product.sale .price ins {
+#shop-section div[class*="product-"].product.type-product.sale .price ins {
   text-decoration: none;
+}
+#shop-section div[class*="product-"].product-type-variable .price .woocommerce-Price-amount {
+  display: inline-block;
+}
+#shop-section div[class*="product-"].product-type-variable .price .price__range-dash {
+  vertical-align: super;
+}
+#shop-section div[class*="product-"].product-type-variable .variations_form .woocommerce-Price-amount.amount {
+  padding: 10px 0;
+}
+#shop-section div[class*="product-"].product-type-variable .variations_form .woocommerce-variation-price del {
+  display: none !important;
+}
+#shop-section div[class*="product-"].product-type-variable .variations_form label {
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+#shop-section div[class*="product-"].product-type-variable .variations_form .quantity:before {
+  content: "QTY";
+  display: inline-block;
+  margin-right: 22px;
+}
+#shop-section div[class*="product-"].product-type-variable .variations {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

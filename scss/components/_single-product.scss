@@ -51,31 +51,66 @@
 				text-align: center;
 			}
 		}
+		&.product.type-product.sale {
+			.onsale {
+					font-size:1.3em;
+					&::before {
+				    content: "( ";
+				    vertical-align: text-bottom;
+				}
+					&::after {
+					    content: " )";
+					    vertical-align: text-bottom;
+					}
+			}
+			.product_title {
+				display: inline-block;
+			}
+			.price {
+				del,ins {
+					display: inline-block;
+					margin-right: 15px;
+				}
+				ins {
+					text-decoration: none;
+				}
+			}
+		}
+
+		&.product-type-variable {
+			.price {
+				.woocommerce-Price-amount {
+					display: inline-block;
+				}
+				.price__range-dash {
+					vertical-align: super;
+				}
+			}
+			.variations_form {
+				.woocommerce-Price-amount.amount {
+					padding:10px 0;
+				}
+				.woocommerce-variation-price {
+					del {
+						display: none!important;
+					}
+				}
+				label {
+					margin-bottom: 0;
+					margin-right: 15px;
+				}
+				.quantity {
+					&:before {
+						content: "QTY";
+						display: inline-block;
+						margin-right: 22px;
+					}
+				}
+			}
+			.variations {
+				overflow: hidden;
+			}
+		}
 	}
 }
 
-.product.type-product.sale {
-	.onsale {
-			font-size:1.3em;
-			&::before {
-		    content: "( ";
-		    vertical-align: text-bottom;
-		}
-		&::after {
-		    content: " )";
-		    vertical-align: text-bottom;
-		}
-	}
-	.product_title {
-		display: inline-block;
-	}
-	.price {
-		del,ins {
-			display: inline-block;
-			margin-right: 15px;
-		}
-		ins {
-			text-decoration: none;
-		}
-	}
-}

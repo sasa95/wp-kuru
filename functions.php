@@ -176,4 +176,12 @@ add_filter( 'woocommerce_variable_sale_price_html', function($html, $product) {
 
     return $html;
 }, 10 ,2 );
+
+
+
+
+
+
+
+
 ?>

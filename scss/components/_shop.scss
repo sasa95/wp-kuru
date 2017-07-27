@@ -93,6 +93,16 @@
 	}
 }
 
+a.reset_variations {
+	@extend .button--add-to-cart;
+	position: static;
+	transform:translate(0,0);
+	margin-left: 15px;
+	&:after {
+		content: " selection";
+	}
+}
+
 body.post-type-archive-product .woo-container {
 	text-align: center;
 }
