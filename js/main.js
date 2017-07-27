@@ -90,9 +90,9 @@ jQuery( document ).ready( function( $ ) {
     });
 
 
-    if($('.product-type-variable').length>0){
+    if($('.summary.entry-summary').length>0){
        $( // wrap by jquery to convert to jQuery object
-          $('.product-type-variable .woocommerce-Price-amount')[0] // get the dom element also you can use `get(0)`
+          $('.summary.entry-summary .woocommerce-Price-amount')[0] // get the dom element also you can use `get(0)`
           .nextSibling // get the textnode which is next to it
         ).wrap('<span class="price__range-dash"/>'); //  wrap the element by p tag
     }

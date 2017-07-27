@@ -747,11 +747,8 @@ body.post-type-archive-product .woo-container {
 #shop-section div[class*="product-"].product.type-product.sale .price ins {
   text-decoration: none;
 }
-#shop-section div[class*="product-"].product-type-variable .price .woocommerce-Price-amount {
+#shop-section div[class*="product-"].product-type-variable .summary.entry-summary .woocommerce-Price-amount {
   display: inline-block;
-}
-#shop-section div[class*="product-"].product-type-variable .price .price__range-dash {
-  vertical-align: super;
 }
 #shop-section div[class*="product-"].product-type-variable .variations_form .woocommerce-Price-amount.amount {
   padding: 10px 0;
@@ -763,13 +760,47 @@ body.post-type-archive-product .woo-container {
   margin-bottom: 0;
   margin-right: 15px;
 }
-#shop-section div[class*="product-"].product-type-variable .variations_form .quantity:before {
+#shop-section div[class*="product-"].product-type-variable .variations {
+  overflow: hidden;
+}
+#shop-section div[class*="product-"].product-type-grouped form.cart {
+  white-space: nowrap;
+  overflow: auto;
+}
+#shop-section div[class*="product-"].product-type-grouped form.cart label {
+  margin-bottom: 0;
+}
+#shop-section div[class*="product-"].product-type-grouped form.cart td {
+  padding-right: 22px;
+}
+#shop-section div[class*="product-"].product-type-grouped form.cart td.label a {
+  color: #c56a6c;
+}
+#shop-section div[class*="product-"].product-type-grouped form.cart td.label a:hover {
+  color: #b54749;
+}
+#shop-section div[class*="product-"].product-type-grouped form.cart td.price .woocommerce-Price-amount.amount {
+  display: block;
+  padding-top: 0;
+  font-size: 1em;
+}
+#shop-section div[class*="product-"].product-type-grouped .price .woocommerce-Price-amount {
+  display: inline-block;
+}
+#shop-section div[class*="product-"] .price__range-dash {
+  vertical-align: super;
+  display: inline-block;
+  padding: 0 3px;
+}
+#shop-section div[class*="product-"] .quantity:before {
   content: "QTY";
   display: inline-block;
   margin-right: 22px;
 }
-#shop-section div[class*="product-"].product-type-variable .variations {
-  overflow: hidden;
+@media (min-width: 768px) and (max-width: 991px) {
+  #shop-section div[class*="product-"] .woocommerce-product-gallery__image.single-product-main-image {
+    width: 70%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
