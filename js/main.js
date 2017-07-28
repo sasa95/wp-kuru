@@ -66,30 +66,6 @@ jQuery( document ).ready( function( $ ) {
 
     $('body.single-product').find('.wp-post-image').addClass('img-fluid');
 
-     function cartTruncate($cart){
-       var $truncated = $cart.text().substring(0,$cart.text().indexOf(' '));
-       var $concat = 'Cart ('+$truncated+')';
-        $cart.text($concat);
-    }
-
-    $(function(){
-      var $cartCount = $('.cart-customlocation');
-      var $cartCountText = $cartCount.text();
-
-      if($cartCountText.substring(0,1)=='0'){
-        $($cartCount.css('display', 'none'));
-      }
-      else {
-        cartTruncate($cartCount);
-      }
-    });
-
-    $(document).ajaxComplete(function() {
-        var $cartCount = $('.cart-customlocation');
-         cartTruncate($cartCount);
-    });
-
-
     if($('.summary.entry-summary').length>0){
        $( // wrap by jquery to convert to jQuery object
           $('.summary.entry-summary .woocommerce-Price-amount')[0] // get the dom element also you can use `get(0)`
@@ -97,6 +73,11 @@ jQuery( document ).ready( function( $ ) {
         ).wrap('<span class="price__range-dash"/>'); //  wrap the element by p tag
     }
 
-   
+   $(function(){
+      $('#woo_pp_ec_button').attr('target', '_blank');
+      $(document).ajaxComplete(function() {
+        $('#woo_pp_ec_button').attr('target', '_blank');
+    });
+   });
 
 });

@@ -1,7 +1,7 @@
-<?php if(is_page('shop')) { get_header('shop');} else { get_header(); }?>
+<?php if(is_page('shop')) { get_header('shop');} else if(is_page('cart')) { get_header('no');} else { get_header(); }?>
 
 <div id="content"><!-- #content -->
-  <section class="section--shop pt-5" id="shop-section">
+  <section class="section--shop py-5" id="shop-section">
     <div class="container text-center">
     
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
