@@ -1,50 +1,4 @@
 body.woocommerce-cart {
-	.shop_table {
-		border-color:rgba(255,255,255,.2);
-		td {
-			border-color: inherit;
-		}
-		.product-name a {
-			color:$color-elegant-red;
-			&:hover {
-				color:darken($color-elegant-red,10)
-			}
-		}
-		.woocommerce-Price-amount {
-			color: $color-price;
-		}
-		.actions {
-			position: relative;
-			padding: 9px 12px;
-		}
-		.coupon {
-			display: flex;
-			@media(min-width: $screen-md){
-				@include abs-centered(vertical);
-			}
-			#coupon_code {
-				@media(min-width: $screen-md){
-					width: 110px;
-				}
-				margin-right: 10px;
-			}
-		}
-		input[type="submit"] {
-			@extend .button;
-			@extend .button--add-to-cart;
-			position: static;
-			transform:translate(0,0);
-			background-color: transparent;
-			font-weight: normal;
-			padding: 5px 10px;
-			&[name="apply_coupon"]{ 
-				margin-left: 10px;
-			}
-		}
-		input.button:disabled[disabled] {
-			padding: 5px 10px;
-		}
-	}
 	.wc-proceed-to-checkout {
 		padding: 0;
 	}
@@ -52,11 +6,9 @@ body.woocommerce-cart {
 		float: none;
 		margin: auto;
 	}
-	// .checkout-button.button.alt.wc-forward,
-	// .wcppec-checkout-buttons__separator,
-	// .cross-sells {
-	// 	display: none;
-	// }
+	.cross-sells {
+		display: none;
+	}
 	#woo_pp_ec_button {
 		padding:0;
 	}

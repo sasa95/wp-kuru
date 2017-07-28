@@ -116,3 +116,23 @@
 		background-color: $color-elegant-red;
 	}
 }
+
+
+.woocommerce .return-to-shop a.button,
+%button--transparent-red {
+	background-color: transparent;
+	color: #fff;
+	font-weight: normal;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 6px 17px;
+    font-size: 1.2em;
+    &:hover {
+		background-color: $color-elegant-red;
+    }
+}
+
+#customer_login form input.woocommerce-Button.button,
+#shop-section form input[name="wc_reset_password"]+input.woocommerce-Button.button {
+	@extend %button--transparent-red;
+}

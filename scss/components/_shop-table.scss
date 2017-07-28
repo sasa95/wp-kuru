@@ -1,0 +1,48 @@
+.woocommerce table.shop_table {
+		.product-name a {
+			color:$color-elegant-red;
+			&:hover {
+				color:darken($color-elegant-red,10)
+			}
+		}
+		.woocommerce-Price-amount {
+			color: $color-price;
+		}
+		.actions {
+			position: relative;
+			padding: 9px 12px;
+		}
+		.coupon {
+			display: flex;
+			@media(min-width: $screen-md){
+				@include abs-centered(vertical);
+			}
+			#coupon_code {
+				@media(min-width: $screen-md){
+					width: 110px;
+				}
+				margin-right: 10px;
+			}
+		}
+		input[type="submit"] {
+			@extend .button;
+			@extend .button--add-to-cart;
+			position: static;
+			transform:translate(0,0);
+			background-color: transparent;
+			font-weight: normal;
+			padding: 5px 10px;
+			&[name="apply_coupon"]{ 
+				margin-left: 10px;
+			}
+		}
+		input.button:disabled[disabled] {
+			padding: 5px 10px;
+		}
+		.view {
+			@extend .button--add-to-cart;
+			position: static;
+			transform:translate(0,0);
+			background-color: transparent;
+		}
+	}

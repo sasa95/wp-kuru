@@ -1,0 +1,9 @@
+.woocommerce-Message>a.woocommerce-Button.button,
+#shop-section div.woocommerce-message > a{
+	background-color: $color-dark-blue;
+	color: #fff;
+	&:hover {
+		background-color: $color-elegant-red;
+		color: #fff;
+	}
+}

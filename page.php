@@ -1,4 +1,4 @@
-<?php if(is_page('shop')) { get_header('shop');} else if(is_page('cart')) { get_header('no');} else { get_header(); }?>
+<?php if(is_page('shop')) { get_header('shop');} else if(is_page('cart') || is_page('checkout') || is_account_page()) { get_header('no');} else { get_header(); }?>
 
 <div id="content"><!-- #content -->
   <section class="section--shop py-5" id="shop-section">

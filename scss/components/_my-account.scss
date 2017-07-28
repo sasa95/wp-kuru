@@ -1,0 +1,32 @@
+.woocommerce-account {
+	background-color: $color-dark-blue;
+	.woocommerce {
+		a {
+			color: $color-nav-links;
+			&:hover {
+				color: darken(#fff,10);
+			}
+		}
+		.woocommerce-MyAccount-content {
+			a {
+				color: $color-elegant-red;
+				&:hover {
+					color: darken($color-elegant-red,10);
+				}
+			}
+		}
+	}
+	.woocommerce-MyAccount-content {
+		text-align: left;
+	}
+}
+
+.woocommerce form.woocommerce-ResetPassword {
+	text-align: center;
+	.woocommerce-form-row {
+		float: none;
+		margin: auto;
+		display: block;
+	}
+} 
+
