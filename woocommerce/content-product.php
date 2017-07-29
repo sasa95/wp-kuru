@@ -38,21 +38,17 @@ if ( empty( $product ) || ! $product->is_visible() ) {
   			 <p class="item-price">
   			 	<?php 
   			 		/**
-	 * woocommerce_after_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_template_loop_rating - 5
-	 * @hooked woocommerce_template_loop_price - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item_title' );
+					 * woocommerce_after_shop_loop_item_title hook.
+					 *
+					 * @hooked woocommerce_template_loop_rating - 5
+					 * @hooked woocommerce_template_loop_price - 10
+					 */
+					do_action( 'woocommerce_after_shop_loop_item_title' );
   			 	?>
   			 </p>
   		</div>
 	</a>
 	<?php
-	
-
-	
-
 	/**
 	 * woocommerce_after_shop_loop_item hook.
 	 *

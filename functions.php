@@ -21,9 +21,7 @@ function kuru_theme_scripts() {
 add_action('wp_enqueue_scripts','kuru_theme_scripts' );
 
 // Menu
-
 add_theme_support('menus');
-
 function register_theme_menus(){
 	register_nav_menus(
 		array(
@@ -44,9 +42,6 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 3
 
 // Change add to cart text on archives depending on product type
 add_filter( 'woocommerce_product_add_to_cart_text' , 'custom_woocommerce_product_add_to_cart_text' );
-/**
- * custom_woocommerce_template_loop_add_to_cart
-*/
 function custom_woocommerce_product_add_to_cart_text() {
 	global $product;
 	
@@ -68,18 +63,14 @@ function custom_woocommerce_product_add_to_cart_text() {
 		default:
 			return __( 'Read more', 'woocommerce' );
 	}
-	
 }
 
 
 // Remove sidebar
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
-
-
 // Posts per page
 add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
-
 function new_loop_shop_per_page( $cols ) {
   // $cols contains the current number of products per page based on the value stored on Options -> Reading
   // Return the number of products you wanna show per page.
@@ -117,11 +108,6 @@ function kvcodes_pagination_fn($pages = '', $range = 2){
      }
 }
 
-// add_filter('body_class','my_class_names');
-// function my_class_names($classes) {
-//     return array();
-// }
-
 add_filter( 'body_class', 'adjust_body_class' );
 function adjust_body_class( $classes ) { 
  
@@ -135,10 +121,9 @@ function adjust_body_class( $classes ) {
     return $classes; 
      
 }
-// Ensure cart contents update when products are added to the cart via AJAX (place the following in functions.php).
-// Used in conjunction with https://gist.github.com/DanielSantoro/1d0dc206e242239624eb71b2636ab148
+
+// Update cart count (AJAX)
 add_filter('add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment');
- 
 function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	global $woocommerce;
 	
@@ -155,10 +140,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
 add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_title', 5 );
 
-
-
 add_filter( 'woocommerce_variable_sale_price_html', function($html, $product) {
-
     $prices = array( $product->get_variation_price( 'min', true ), $product->get_variation_price( 'max', true ) );
     $price = $prices[0] !== $prices[1] ? sprintf( _x( '%1$s&ndash;%2$s', 'Price range: from-to', 'woocommerce' ), wc_price( $prices[0] ), wc_price( $prices[1] ) ) : wc_price( $prices[0] );
 
@@ -168,7 +150,6 @@ add_filter( 'woocommerce_variable_sale_price_html', function($html, $product) {
 }, 10 ,2 );
 
 add_filter( 'woocommerce_variable_sale_price_html', function($html, $product) {
-
     $prices = array( $product->get_variation_price( 'min', true ), $product->get_variation_price( 'max', true ) );
     $price = $prices[0] !== $prices[1] ? sprintf( _x( '%1$s&ndash;%2$s', 'Price range: from-to', 'woocommerce' ), wc_price( $prices[0] ), wc_price( $prices[1] ) ) : wc_price( $prices[0] );
 
