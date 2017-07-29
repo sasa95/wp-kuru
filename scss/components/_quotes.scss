@@ -1,20 +1,20 @@
 .quote {
-	color: #fff;
 	border-left: 10px solid;
 	padding-left: 30px;
 	line-height: 1.6;
+	font-family: 'Droid Serif', serif;
 	font-weight: bold;
 	font-style: italic;
-	font-family: 'Droid Serif', serif;
+	color: #fff;
 }
 
 .quote--header {
-	font-size: 1.3em;
-	width: 80%;
-	max-width: 1200px;
-	border-color: $color-elegant-gray;
 	@include abs-centered(both);
 	animation-delay: .6s;
+	border-color: $color-elegant-gray;
+	width: 80%;
+	max-width: 1200px;
+	font-size: 1.3em;
 	@media(min-width: 400px) {
 		font-size: 1.6em;
 	}
@@ -30,12 +30,12 @@
 }
 
 .quote--footer {
-	color: $color-dark-blue;
+	margin: 40px auto;
+	border-color: $color-dark-blue;
 	width: 90%;
 	max-width: 400px;
-	margin: 40px auto;
 	font-size: 1.2em;
-	border-color: $color-dark-blue;
+	color: $color-dark-blue;
 	@media(min-width: $screen-md){
 		margin: 0 auto 20px auto;
 	}

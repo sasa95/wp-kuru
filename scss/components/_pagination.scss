@@ -1,31 +1,24 @@
-body.post-type-archive-product {
-	.kvc_pagination {
-		// margin-left: 25px;
-	}
-}
-
 .kvc_pagination{
 	@include abs-centered(horizontal);
 	clear:both;
 	font-size:16px;
 	line-height:13px;
-	// bottom: 10px;
 }
 
 .kvc_pagination span, .kvc_pagination a {
-	display:block;
 	float:left;
+	display:block;
 	margin: 2px 2px 2px 0;
 	padding:6px 9px 5px 9px;
-	text-decoration:none;
 	width:auto;
-	color:#fff;
 	background: #555;
+	text-decoration:none;
+	color:#fff;
 }
 
 .kvc_pagination a:hover{
-	color:#fff;
 	background: #c56a6c;
+	color:#fff;
 }
 
 .kvc_pagination .current{

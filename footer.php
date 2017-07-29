@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-4 text-center">
               <p>Follow me on Instagram</p>
-              <a href=""><img src="<?php bloginfo('stylesheet_directory');?>/img/instagram.png" alt=""></a>
+              <a href="https://www.instagram.com/shamankuru/" target="_blank"><img src="<?php bloginfo('stylesheet_directory');?>/img/instagram.png" alt=""></a>
             </div>
           </div>
           <p class="quote quote--footer" data-aos="fade" data-aos-offset="-10">You are My sight, so have faith. You are My Face, so veil yourself.</p>

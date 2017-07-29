@@ -6,7 +6,7 @@
     <title><?php wp_title('|',true,'right');?> <?php bloginfo('name'); ?></title>
     <?php wp_head();?>
   </head>
-  
+
   <body <?php body_class(); ?>>
     <div id="wrapper">
       <header id="header" class="header header--main">
@@ -33,6 +33,6 @@
           </div>
         </nav>
           <p class="animated fadeIn quote quote--header" data-aos="fade" data-aos-delay="500">Be you, for yourself. No one is able to replace you.</p>
-          <a href="#about" class="button button--elegant" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="700">Learn More</a>
+          <a href="<?php if(is_page('video')) {echo "#video-section";} else {echo "#about";}?>" class="button button--elegant" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="700">Learn More</a>
           <img class="header__arrows" src="<?php bloginfo('stylesheet_directory');?>/img/header/arrows.png" alt=""  data-aos="fade" data-aos-offset="-100" data-aos-delay="900">
       </header><!-- #header -->

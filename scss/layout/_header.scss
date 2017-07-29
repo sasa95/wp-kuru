@@ -1,11 +1,16 @@
 .header {
-	background-repeat: no-repeat;
-	background-size: cover;
-	min-height: 550px;
 	position: relative;
+	min-height: 550px;
 	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
 	@media(min-width: 375px){
 		min-height: 665px;
+	}
+	.header__arrows {
+		@include abs-centered(horizontal);
+		bottom: 4%;
+		width: 16px;
 	}
 	.button--elegant {
 		@include abs-centered(horizontal);
@@ -17,32 +22,19 @@
 	background-image: url('img/header/header-main.jpg');
 }
 
-// Shop
-
 .header--shop {
 	background-image: url('img/header/header-shop.jpg');
 	.header__writings {
 		@include abs-centered();
 		h1 {
-			color: #fff;
 			font-weight: normal;
-			letter-spacing: 2px;
 			text-align: center;
+			letter-spacing: 2px;
+			color: #fff;
 		}
-	}
-}
-
-body.single-product {
-	.header--shop {
-		min-height: auto;
-		background-image: none;
 	}
 }
 
 .header--no-bg {
 	height: 40px;
-}
-
-.wrapper {
-	background-color: red;
 }

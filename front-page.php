@@ -1,10 +1,10 @@
 <?php get_header(); ?>
-	<div id="content"><!-- #content -->
+	   <div id="content"><!-- #content -->
         <div class="container">
           <section class="who-am-i py-5" id="about">
             <h1 class="text-center mb-4 font-weight-normal">Who Am I?</h1>
             <p class="text-justify" data-aos="fade">Nomadic son of United States Marine and Kyokushinkai Practicioner. Descendant of the Bloodline of Ing. A true chosen brave. Shamanic seer, shadow walker, ancient sword seller, protector, gardener, and model for the fearsome and fearless.</p>
-            <h2 class="signiture text-right" data-aos="fade" data-aos-delay="300">Signiture</h2>
+            <h2 class="signiture text-right" data-aos="fade" data-aos-delay="300">Kuru Sefu</h2>
           </section>
         </div>
          <section class="what-i-do py-5">

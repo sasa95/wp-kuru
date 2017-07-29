@@ -33,9 +33,9 @@
           </div>
         </nav>
         <div class="header__writings">
-            <img src="<?php bloginfo('stylesheet_directory');?>/img/logo.png" alt="">
-            <h1 class="animated fadeIn">Official Web Shop</h1>
-          </div>
-          <a href="#shop-section" class="button button--elegant">Shop Now</a>
-           <img class="header__arrows" src="<?php bloginfo('stylesheet_directory');?>/img/header/arrows.png" alt=""  data-aos="fade" data-aos-offset="-100" data-aos-delay="900">
+          <img src="<?php bloginfo('stylesheet_directory');?>/img/logo.png" alt="">
+          <h1 class="animated fadeIn">Official Web Shop</h1>
+        </div>
+        <a href="#shop-section" class="button button--elegant">Shop Now</a>
+        <img class="header__arrows" src="<?php bloginfo('stylesheet_directory');?>/img/header/arrows.png" alt=""  data-aos="fade" data-aos-offset="-100" data-aos-delay="900">
       </header><!-- #header -->

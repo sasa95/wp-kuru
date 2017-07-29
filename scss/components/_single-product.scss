@@ -1,8 +1,5 @@
 #shop-section {
 	div[class*="product-"] {
-
-
-
 		.product_title {
 			padding-bottom: 10px;
 		}
@@ -29,8 +26,8 @@
 			@extend .button--add-to-cart;
 			position: static;
 			transform:translate(0,0);
-			background-color: transparent;
 			margin: 30px 0;
+			background-color: transparent;
 		}
 		.posted_in {
 			display: block;
@@ -58,9 +55,9 @@
 			.onsale {
 					font-size:1.3em;
 					&::before {
-				    content: "( ";
-				    vertical-align: text-bottom;
-				}
+					    content: "( ";
+					    vertical-align: text-bottom;
+					}
 					&::after {
 					    content: " )";
 					    vertical-align: text-bottom;
@@ -94,8 +91,8 @@
 					}
 				}
 				label {
-					margin-bottom: 0;
 					margin-right: 15px;
+					margin-bottom: 0;
 				}
 			}
 			.variations {
@@ -105,8 +102,8 @@
 
 		&.product-type-grouped {
 			form.cart {
-				white-space: nowrap;
 				overflow: auto;
+				white-space: nowrap;
 				label {
 					margin-bottom: 0;
 				}
@@ -119,24 +116,19 @@
 						color: darken($color-elegant-red,10);
 					}
 				}
-
 				td.price .woocommerce-Price-amount.amount {
 					display: block;
 					padding-top: 0;
 					font-size: 1em;
 				}
 			}
-
 			.price .woocommerce-Price-amount {
 				display: inline-block;
 			}
-
 		}
-
-		
 		.price__range-dash {
-			vertical-align: super;
 			display: inline-block;
+			vertical-align: super;
 			padding:0 3px;
 		}
 
@@ -154,6 +146,3 @@
 		}
 	}
 }
-
-
-

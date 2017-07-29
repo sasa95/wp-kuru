@@ -5,30 +5,30 @@
 	}
 	form {
 		position: relative;
-		max-width: 350px;
 		margin: auto;
+		max-width: 350px;
+		@media(min-width: $screen-md){
+			form {
+				margin: 0;
+			}
+		}
 	}
 	.button--dark-blue {
-		height: 40px;
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
 		position: absolute;
 		right: 0;
 		bottom: 0;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		height: 40px;
 		 @media (-ms-high-contrast: active), (-ms-high-contrast: none) {  
       		height: auto;
   		}
 	}
 	.subscribe-label {
-		text-align: center;
 		margin-bottom: 20px;
-	}
-	@media(min-width: $screen-md){
-		.subscribe-label {
+		text-align: center;
+		@media(min-width: $screen-md){
 			text-align: left;
-		}
-		form {
-			margin: 0;
 		}
 	}
 }
@@ -50,8 +50,8 @@
 	}
 	.author {
 		a {
-			color: $color-dark-blue;
 			text-decoration: none!important;
+			color: $color-dark-blue;
 			&:hover {
 				color: lighten($color-dark-blue,10);
 			}

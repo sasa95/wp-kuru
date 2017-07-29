@@ -29,9 +29,9 @@
 			@extend .button--add-to-cart;
 			position: static;
 			transform:translate(0,0);
+			padding: 5px 10px;
 			background-color: transparent;
 			font-weight: normal;
-			padding: 5px 10px;
 			&[name="apply_coupon"]{ 
 				margin-left: 10px;
 			}

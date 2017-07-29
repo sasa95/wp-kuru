@@ -1,97 +1,12 @@
-.navbar-toggler {
-	height: 40px;
-	cursor: pointer;
-	margin-right: 15px;
-	outline: none!important;
-	&.togglerScrolled {
-		height: 35px;
-
-	}
-}
-
-// Animation
-
-.hamburger-menu {
-	transition: all .2s;
-	width: 30px;
-	height: 3px;
-	border-radius: 10px;
-	// Expended
-	background-color: $color-elegant-red;
-	display: block;
-
-	&:not(:first-child) {
-		margin-top: 5px;
-	}
-
-	// 4.4px = (30px - (30px * 0.7071)) / 2
-	&:first-child {
-		transform:translateX(4.4px) rotate(45deg);
-		transform-origin: 10% 10%;
-	}
-
-	&:nth-child(2) {
-		opacity: 0;
-	}
-
-	&:nth-child(3) {
-		transform:translateX(4.4px) rotate(-45deg);
-		transform-origin: 10% 90%;
-	}
-	&.hambgScrolled {
-		// box-sizing:border-box;
-		width: 20px;
-		height: 1px;
-		&:first-child {
-			transform:translateX(1.99px) rotate(45deg);
-			transform-origin: 10% 10%;
-		}
-		&:nth-child(2) {
-			opacity: 0;
-		}
-		&:nth-child(3) {
-			transform:translateX(1.99px) rotate(-45deg);
-			transform-origin: 10% 90%;
-		}
-	}
-}
-
-// Collapsed
-#nav--main {
-	button.navbar-toggler {
-		border-color:$color-elegant-red;
-	}
-
-	.navbar-toggler.collapsed {
-		border-color: #e4e4e4;
-		.hamburger-menu {
-			background-color: #e4e4e4;
-
-			&:first-child {
-				transform:translateX(0) rotate(0);
-			}
-			&:nth-child(2) {
-				opacity: 1;
-			}
-
-			&:nth-child(3) {
-				transform:translateX(0) rotate(-0);
-			}
-		}
-	}
-}
-
-////////////// --- END OF NAV BTN --- //////////////
-
 .button {
-	font-size: 1.2em;
-	color: #fff;
+	transition: background-color .4s;
+	outline: none!important;
 	border:none;
 	border-radius: 3px;
 	padding: 4px 20px;
+	font-size: 1.2em;
 	text-decoration: none!important;
-	outline: none!important;
-	transition: background-color .4s;
+	color: #fff;
 	&:hover {
 		cursor: pointer;
 	}
@@ -120,13 +35,13 @@
 
 .woocommerce .return-to-shop a.button,
 %button--transparent-red {
-	background-color: transparent;
-	color: #fff;
-	font-weight: normal;
-    border: 2px solid #fff;
+	border: 2px solid #fff;
     border-radius: 8px;
     padding: 6px 17px;
-    font-size: 1.2em;
+	background-color: transparent;
+	font-size: 1.2em;
+	font-weight: normal;
+	color: #fff;
     &:hover {
 		background-color: $color-elegant-red;
     }
