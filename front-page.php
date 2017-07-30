@@ -54,7 +54,7 @@
           <section class="contact-me py-5 text-white">
             <div class="container form-container">
               <h1 class="text-center mb-4 font-weight-normal">Contact Me</h1>
-              <form>
+              <form id="contact-form">
                 <div class="form-group row">
                   <label for="name" class="col-sm-2 col-form-label">Name</label>
                   <div class="col-sm-10">

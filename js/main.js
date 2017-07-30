@@ -80,4 +80,40 @@ jQuery( document ).ready( function( $ ) {
     });
    });
 
+  $('#contact-form').submit(function(e){
+    var name = $('#contact-form #name').val();
+    var email = $('#contact-form #email').val();
+    var message = $('#contact-form #message').val();
+
+    if (!name) {
+      e.preventDefault();
+      alertify.error('Please, fill in the name field.');
+    }
+
+    else
+      if (!email) {
+        e.preventDefault();
+        alertify.error('Please, fill in the email field.');
+      }
+
+    else
+       if (!message) {
+        e.preventDefault();
+        alertify.error('Please, fill in the message field.');
+      }
+
+      else {
+        $.ajax({
+            url: "https://formspree.io/sasadrmic032@gmail.com", 
+            method: "POST",
+            data: $(this).serialize(),
+            dataType: "json"
+        });
+        e.preventDefault();
+        $(this).get(0).reset();
+        alertify.success('Message sent!');
+      }
+
+  });
+
 });
