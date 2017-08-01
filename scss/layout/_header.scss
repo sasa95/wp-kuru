@@ -24,6 +24,7 @@
 
 .header--shop {
 	background-image: url('img/header/header-shop.jpg');
+	background-position-y:bottom;
 	.header__writings {
 		@include abs-centered();
 		h1 {

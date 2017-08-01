@@ -89,6 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header--shop {
   background-image: url("img/header/header-shop.jpg");
+  background-position-y: bottom;
 }
 .header--shop .header__writings {
   position: absolute !important;
@@ -115,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .what-i-do {
-  background-color: #2C3E50;
+  background-color: #354b60;
 }
 @media (max-width: 767px) {
   .what-i-do__item {
@@ -186,7 +187,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-me {
-  background-color: #2C3E50;
+  background-color: #354b60;
 }
 .contact-me .form-container {
   margin: auto;
@@ -200,12 +201,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section--shop {
-  background-color: #2C3E50;
+  background-color: #354b60;
   color: #fff;
 }
 
 .section--video {
-  background: #2C3E50;
+  background: #354b60;
   color: #fff;
 }
 .section--video .single-video-container {
@@ -259,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
 #subscribe-email {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  border: 2px solid #2C3E50;
+  border: 2px solid #354b60;
 }
 
 .footer__last-line {
@@ -276,10 +277,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer__last-line .author a {
   text-decoration: none !important;
-  color: #2C3E50;
+  color: #354b60;
 }
 .footer__last-line .author a:hover {
-  color: #3e5871;
+  color: #476581;
 }
 .footer__last-line .copyright {
   margin-bottom: 5px;
@@ -478,7 +479,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .button--dark-blue {
-  background-color: #2C3E50;
+  background-color: #354b60;
 }
 .button--dark-blue:hover, .button--dark-blue:active {
   background-color: #c56a6c;
@@ -561,11 +562,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .quote--footer {
   margin: 40px auto;
-  border-color: #2C3E50;
+  border-color: #354b60;
   width: 90%;
   max-width: 400px;
   font-size: 1.2em;
-  color: #2C3E50;
+  color: #354b60;
 }
 @media (min-width: 768px) {
   .quote--footer {
@@ -871,7 +872,7 @@ body.woocommerce-cart #woo_pp_ec_button {
 }
 
 .woocommerce-account {
-  background-color: #2C3E50;
+  background-color: #354b60;
 }
 .woocommerce-account .woocommerce a {
   color: #e4e4e4;
@@ -950,7 +951,7 @@ body.woocommerce-cart #woo_pp_ec_button {
 
 .woocommerce-Message > a.woocommerce-Button.button, #shop-section .woocommerce-Message > .shop-item-link--added ~ a.woocommerce-Button.added_to_cart,
 #shop-section div.woocommerce-message > a {
-  background-color: #2C3E50;
+  background-color: #354b60;
   color: #fff;
 }
 .woocommerce-Message > a.woocommerce-Button.button:hover, #shop-section .woocommerce-Message > .shop-item-link--added ~ a.woocommerce-Button.added_to_cart:hover,
