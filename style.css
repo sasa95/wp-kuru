@@ -83,6 +83,13 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 10%;
 }
 
+header .logo-text {
+  display: inline-block;
+  padding-left: 15px;
+  vertical-align: middle;
+  font-size: 0.8em;
+}
+
 .header--main {
   background-image: url("img/header/header-main.jpg");
 }
@@ -96,6 +103,11 @@ h1, h2, h3, h4, h5, h6 {
   top: 50% !important;
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
+  text-align: center;
+}
+.header--shop .header__writings > img {
+  padding-bottom: 20px;
+  width: 90px;
 }
 .header--shop .header__writings h1 {
   font-weight: normal;

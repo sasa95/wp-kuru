@@ -12,7 +12,7 @@
       <header id="header" class="header--no-bg">
         <nav class="scrolledNav navbar navbar-toggleable-md navbar-light" id="nav--main">
           <div class="container">
-            <a class="navbar-brand float-left" href="<?php bloginfo('url');?>">LOGO</a>
+            <a class="navbar-brand float-left" href="<?php bloginfo('url');?>"><img src="<?php bloginfo('stylesheet_directory');?>/img/logo.svg" alt="Brand Logo" width="30"><span class="logo-text">Kuru Sefu</span></a>
             <button class="togglerScrolled navbar-toggler collapsed float-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
               <span class="hamburger-menu hambgScrolled"></span>
               <span class="hamburger-menu hambgScrolled"></span>
